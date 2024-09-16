@@ -1,4 +1,4 @@
-# Python Console Beginners Puzzle 6
+# Python Console Beginners Premium Puzzle 6
 
 ## While Loops
 

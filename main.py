@@ -31,6 +31,33 @@ def puzzle_a():
     print('\nPuzzle A')
     print('~~~~~~~~~')
 
+    counter = 0
+
+    while True:
+        user_input = input("Knock, Knock!")
+
+        if user_input.lower() == "who's there?" or user_input.lower() == "who is there?":
+            # End the while loop
+            break
+        else:
+            counter += 1
+            if counter > 1:
+                # This will work on the second attempt
+                print("Just type 'who is there?'....")
+
+    # You could just reset counter back to 0...
+    # counter = 0
+    who_counter = 0
+    while True:
+        user_input = input("Phil.... : ")
+        if user_input.lower() == "phil who?":
+            break
+        else:
+            who_counter += 1
+            print("Just type 'phil who?'....")
+
+    print("Phil Deez Nuts!")
+
 
 def example_b():
     print('\nExample B')
@@ -69,6 +96,17 @@ def puzzle_b():
     print('\nPuzzle B')
     print('~~~~~~~~~')
 
+    user_input = int(input("Enter a number between 1 and 10: "))
+
+    while user_input < 0 or user_input > 10:
+        user_input = int(input("Sorry, it has to be between 1 and 10: "))
+
+    i = 2
+    while i <= 5:
+        ans1 = pow(i, user_input)
+        print(f"{user_input} to the power of {i} is {ans1}")
+        i += 1
+
 
 def example_c():
     print('\nExample C')
@@ -106,6 +144,29 @@ def example_c():
 def puzzle_c():
     print('\nPuzzle C')
     print('~~~~~~~~~~~')
+
+    keep_laughing = True
+    counter = 0
+
+    while keep_laughing:
+
+        if counter < 3:
+            print("Ha ha ha ha ha... ")
+            counter += 1
+        else:
+            print("Ha ha???...")
+            counter = 0
+
+        user_input = input()
+
+        contains_ha = False
+        if "ha" in user_input:
+            contains_ha = True
+
+        if contains_ha == False:
+            keep_laughing = False
+            counter = 0
+            print("Ahhh... it's good to laugh!")
 
 
 if __name__ == '__main__':
